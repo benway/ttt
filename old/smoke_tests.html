@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Smoke tests</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/smoketests.js"></script>
+    <link rel="stylesheet" href="/smoketests.css">
+  </head>
+  <body bgcolor="FFFFFF">
+    <H1>Smoke tests</H1>
+    
+    <table border="0" width="100%;">
+      <tr>
+        <td style="width: 50%; vertical-align: top;">
+          <table border="1">
+            <thead>
+              <tr>
+                <th style="width: 10%;">Test</th>
+                <th style="width: 80%;">Result</th>
+                <th style="width: 10%;"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="vertical-align: top;">
+                  <form id="test_vendors" method="post" action="/smoke_tests?test=vendors">
+                    <input id="vendors" type="submit" value="Vendors">
+                  </form>
+                </td>
+                <td id="test_vendors_results_area"></td>
+                <td id="test_vendors_indicator"></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td style="width: 50%; vertical-align: top;">
+          <table border="1" width="100%">
+            <thead>
+              <tr>
+                <th style="width: 10%;">Test</th>
+                <th style="width: 80%;">Result</th>
+                <th style="width: 10%;"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="vertical-align: top;">
+                  <form id="test_api" method="get" action='http://localhost:3000/services/json/beneficiaries/ff1db153-bc97-4bfb-b83f-414572466050'>
+                    <input id="api" type="submit" value="API">
+                  </form>
+                </td>
+                <td id="test_api_results_area"></td>
+                <td id="test_api_indicator"></td>
+              </tr>
+            </tbody>
+          </table>  
+        </td>
+      </tr>
+      <tr>
+      </tr>
+    </table>
+  </body>
+</html>
